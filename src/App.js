@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Components
-import Home from './commponents/Home';
-import Header from './commponents/Header/Header';
+import Home from './components/Home';
+import Header from './components/Header/Header';
 
 import { GlobalStyle } from './GlobalStyle'
 
