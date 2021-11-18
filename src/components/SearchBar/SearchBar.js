@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 
 //image
-import searchIcon from '../../images/search-icon.svg'
+import searchIcon from '../../images/search-icon.svg';
 
 //styles
-import { Wrapper, Content} from './SearchBar.styles'
+import { Wrapper, Content} from './SearchBar.styles';
 
 
 const SearchBar = ({setSearchTerm}) => {
@@ -21,7 +21,7 @@ const SearchBar = ({setSearchTerm}) => {
             setSearchTerm(state);
         }, 500);
 
-        return () => clearTimeout(timer)
+        return () => clearTimeout(timer);
     }, [setSearchTerm, state]);
 
     return(
