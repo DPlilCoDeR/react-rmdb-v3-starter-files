@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 //API
-import API from '../API'
+import API from '../API';
 
 const initialState = {
     page: 0,
@@ -33,11 +33,11 @@ export function useHomeFetch () {
             setError(true);
         }
         setLoading(false);
-    };
+    }
 
     useEffect(() => {
-        fetchMovies(1);
-    }, []);
+        fetchMovies(1, searchTerm);
+    }, [searchTerm]);
 
-    return { state, loading, error, setSearchTerm };
+    return { state, loading, error, searchTerm, setSearchTerm };
 }

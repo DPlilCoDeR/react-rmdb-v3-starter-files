@@ -1,5 +1,5 @@
 //style
-import { Image } from './Thumb.styles.js'
+import { Image } from './Thumb.styles.js';
 
 
 const Thumb = ({image , movieId, clickable}) => (
