@@ -18,10 +18,13 @@ import { useHomeFetch } from '../Hooks/useHomeFetch';
 import NoImage from '../images/no_image.jpg';
 
 const Home = () => {
-  const { state, loading, error, searchTerm, setSearchTerm } = useHomeFetch();
+  const { state, loading, error, searchTerm, setSearchTerm, setLoadingMore } = useHomeFetch();
 
+  if (error) { return <div>somenthing go wrong</div> };
+  
   return (
     <>
+
     {!searchTerm && state.results[0] ? (
       <HeroImage 
         image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
@@ -48,7 +51,7 @@ const Home = () => {
     </Grid>
     {loading && <Spinner/>}
     {state.page < state.total_pages && !loading && (
-      <Button text='Load More'/>
+      <Button text='Load More' callback={()=> setLoadingMore(true)}/>
     )}
     </>
   );
