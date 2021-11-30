@@ -8,6 +8,7 @@ import Grid from "./Grid/Grid";
 import Spinner from "./Spinner/Spinner";
 
 //Hook
+import { useMovieFetch } from "../Hooks/useMovieFetch";
 
 //Not image
 import NoImage from '../images/no_image.jpg'
@@ -15,6 +16,8 @@ import NoImage from '../images/no_image.jpg'
 
 const Movie = () => {
     const { movieId } = useParams()
+    const {state, loading, error} = useMovieFetch(movieId)
+    console.log(state);
     
     return (
         <>
