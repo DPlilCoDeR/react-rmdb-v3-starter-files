@@ -5,7 +5,7 @@ import { calcTime , convertMoney } from "../../helpers";
 import { Column, Content, Wrapper } from "./MovieInfoBar.styles";
 
 
-export const MovieInfoBar = ({time, budget, revenue}) => (
+const MovieInfoBar = ({time, budget, revenue}) => (
     <Wrapper>
         <Content>
             <Column>
@@ -21,3 +21,5 @@ export const MovieInfoBar = ({time, budget, revenue}) => (
         </Content>
     </Wrapper>
 ) 
+
+export default MovieInfoBar;
