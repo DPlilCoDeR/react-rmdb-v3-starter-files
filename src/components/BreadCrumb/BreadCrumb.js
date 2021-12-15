@@ -1,3 +1,7 @@
+//PropType
+import PropTypes from "prop-types"
+
+//Link is like a anchor
 import { Link } from "react-router-dom";
 
 //styles
@@ -16,5 +20,9 @@ const BreadCrumb = ({movieTitle}) => (
         </Content>
     </Wrapper>
 );
+
+BreadCrumb.propTypes = {
+    movieTitle: PropTypes.string
+}
 
 export default BreadCrumb;

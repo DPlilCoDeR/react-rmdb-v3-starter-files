@@ -1,7 +1,10 @@
+//PropTypes
+import PropTypes from "prop-types";
+
 //Styles
 import { Wrapper, Content, Text } from './HeroImage.styles'
 
-const HeroImage = ({ image, title, text}) =>
+const HeroImage = ({ image, title, text}) => (
     <Wrapper image={image}>
         <Content>
             <Text>
@@ -9,6 +12,13 @@ const HeroImage = ({ image, title, text}) =>
                 <p>{text}</p>
             </Text>
         </Content>
-    </Wrapper>;
+    </Wrapper>
+);
+
+HeroImage.propTypes = {
+    image: PropTypes.string,
+    title: PropTypes.string,
+    text: PropTypes.string
+}
 
 export default HeroImage;
